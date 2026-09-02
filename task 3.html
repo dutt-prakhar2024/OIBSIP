@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temperature Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="converter">
+    <div class="converter__card">
+
+      <header class="converter__header">
+        <span class="converter__eyebrow">Thermal Unit Converter</span>
+        <h1 class="converter__title">Convert Temperature</h1>
+        <p class="converter__subtitle">Enter a value, pick its unit, and see it in all three scales.</p>
+      </header>
+
+      <form id="converterForm" class="converter__form" novalidate>
+        <div class="field">
+          <label for="tempInput" class="field__label">Temperature value</label>
+          <input
+            type="text"
+            inputmode="decimal"
+            id="tempInput"
+            class="field__input"
+            placeholder="e.g. 37"
+            aria-describedby="inputError"
+          />
+          <p id="inputError" class="field__error" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="unitSelect" class="field__label">Input unit</label>
+          <select id="unitSelect" class="field__select">
+            <option value="C">Celsius (°C)</option>
+            <option value="F">Fahrenheit (°F)</option>
+            <option value="K">Kelvin (K)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn--primary">Convert</button>
+      </form>
+
+      <section class="results" id="results" aria-live="polite">
+        <div class="result-card" id="resultCelsius">
+          <span class="result-card__label">Celsius</span>
+          <span class="result-card__value">—</span>
+        </div>
+        <div class="result-card" id="resultFahrenheit">
+          <span class="result-card__label">Fahrenheit</span>
+          <span class="result-card__value">—</span>
+        </div>
+        <div class="result-card" id="resultKelvin">
+          <span class="result-card__label">Kelvin</span>
+          <span class="result-card__value">—</span>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

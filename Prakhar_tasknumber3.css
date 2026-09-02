@@ -1,0 +1,211 @@
+/* =========================================================
+   TOKENS
+   ========================================================= */
+:root {
+  --color-slate: #1C2B33;
+  --color-slate-light: #2B3F49;
+  --color-mist: #EEF3F4;
+  --color-teal: #2F8F7F;
+  --color-teal-dark: #24705E;
+  --color-error: #C6564A;
+  --color-ink: #1C2B33;
+  --color-ink-soft: #5C6C73;
+  --color-border: #D6E0E1;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --radius: 8px;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-mono);
+  background: var(--color-mist);
+  color: var(--color-ink);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg) var(--space-sm);
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+.converter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.converter__card {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-lg) var(--space-md);
+}
+
+.converter__header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.converter__eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: var(--space-xs);
+}
+
+.converter__title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-slate);
+  margin-bottom: var(--space-xs);
+}
+
+.converter__subtitle {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+.converter__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.field__label {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-slate);
+  margin-bottom: 0.4rem;
+}
+
+.field__input,
+.field__select {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-mist);
+  color: var(--color-ink);
+  transition: border-color 0.2s ease;
+}
+
+.field__input:focus,
+.field__select:focus {
+  outline: none;
+  border-color: var(--color-teal);
+}
+
+.field__input.field__input--invalid {
+  border-color: var(--color-error);
+}
+
+.field__error {
+  min-height: 1.2rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.82rem;
+  color: var(--color-error);
+  margin-top: 0.4rem;
+}
+
+.btn {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn--primary {
+  background: var(--color-teal);
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background: var(--color-teal-dark);
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   RESULTS
+   ========================================================= */
+.results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xs);
+}
+
+.result-card {
+  background: var(--color-slate);
+  border-radius: var(--radius);
+  padding: var(--space-sm) 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.result-card__label {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9FB4BA;
+}
+
+.result-card__value {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+  word-break: break-word;
+}
+
+.result-card--error .result-card__value {
+  color: #F0A79D;
+  font-size: 0.78rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 480px) {
+  .converter__card {
+    padding: var(--space-md) var(--space-sm);
+  }
+  .results {
+    grid-template-columns: 1fr;
+  }
+}

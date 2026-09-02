@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naina Chaudhary — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="#top" class="navbar__logo">naina<span>.dev</span></a>
+      <nav class="navbar__links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="navbar__cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO / PROFILE ===== -->
+  <section class="hero" id="top">
+    <div class="hero__inner">
+      <div class="hero__avatar" aria-hidden="true">NC</div>
+      <p class="eyebrow">// hello world</p>
+      <h1 class="hero__headline">Naina Chaudhary</h1>
+      <p class="hero__role">B.Tech CSE Student &amp; Aspiring Software Developer</p>
+      <p class="hero__subheadline">
+        I'm a Computer Science undergrad who loves turning ideas into working code —
+        currently exploring backend logic, databases, and the fundamentals of clean software design.
+      </p>
+      <div class="hero__cta-group">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--outline">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="section__inner">
+      <span class="section__index">01</span>
+      <h2 class="section__title">About Me</h2>
+      <p class="about__text">
+        I'm a B.Tech Computer Science student with a massive interest in programming languages
+        and problem-solving. I enjoy building real-life projects that go beyond textbook exercises —
+        turning what I learn in class into something I can actually run, break, and improve.
+        Outside of coursework, I'm steadily building my skills in databases and frontend development
+        so I can build complete, end-to-end applications on my own.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills" id="skills">
+    <div class="section__inner">
+      <span class="section__index section__index--light">02</span>
+      <h2 class="section__title section__title--light">Skills</h2>
+
+      <div class="skills__grid">
+        <div class="skill-card">
+          <span class="skill-card__lang">C</span>
+          <p>Procedural programming, memory &amp; pointers</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__lang">C++</span>
+          <p>OOP concepts, data structures &amp; algorithms</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__lang">Python</span>
+          <p>Scripting, automation, problem solving</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__lang">Java</span>
+          <p>OOP, core Java fundamentals</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__lang">DBMS</span>
+          <p>SQL, relational schema design, normalization</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__lang">Frontend</span>
+          <p>HTML, CSS &amp; the basics of building UI</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects">
+    <div class="section__inner">
+      <span class="section__index">03</span>
+      <h2 class="section__title">Projects</h2>
+      <p class="section__lede">A couple of things I've been building. (Placeholders — swap with your real repos.)</p>
+
+      <div class="projects__grid">
+        <article class="project-card">
+          <div class="project-card__tag">Python</div>
+          <h3>Student Result Management System</h3>
+          <p>
+            A command-line tool to store, update, and calculate student grades using file
+            handling and basic data structures — built to practice core Python logic.
+          </p>
+          <a href="#" class="project-card__link">github.com/nainachaudhary/placeholder-project-1 →</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__tag">C++ / DBMS</div>
+          <h3>Library Management System</h3>
+          <p>
+            A console-based application connecting C++ with a SQL database to manage book
+            records, issue/return logs, and student accounts.
+          </p>
+          <a href="#" class="project-card__link">github.com/nainachaudhary/placeholder-project-2 →</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__tag">HTML / CSS</div>
+          <h3>Personal Portfolio Website</h3>
+          <p>
+            This very site — my first end-to-end responsive frontend project, built to
+            practice layout, typography, and consistent design systems.
+          </p>
+          <a href="#" class="project-card__link">github.com/nainachaudhary/placeholder-project-3 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <footer class="contact" id="contact">
+    <div class="section__inner section__inner--narrow">
+      <span class="section__index section__index--light">04</span>
+      <h2 class="section__title section__title--light">Let's Connect</h2>
+      <p class="contact__lede">
+        Open to internships, collaborations, or just talking about code.
+      </p>
+      <p class="contact__name">Naina Chaudhary</p>
+      <a href="mailto:naina.chaudhary@example.com" class="contact__email">naina.chaudhary@example.com</a>
+
+      <div class="contact__socials">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="LeetCode">LeetCode</a>
+      </div>
+    </div>
+    <p class="footer__bottom">&copy; 2026 Naina Chaudhary. Built with HTML &amp; CSS. (Placeholder contact links for demo purposes.)</p>
+  </footer>
+
+</body>
+</html>
